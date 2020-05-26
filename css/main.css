@@ -10,13 +10,11 @@ body {
 .main-header {
     width: 400px;
     padding: 10px;
+    margin: 0px;
     background-color: #93c47e;
     font-size: 20px;
     color: white;
     text-align: center;
-}
-.skills-list{
-    margin: 10px 0px 20px -290px;
 }
 .remove {
     background-color: #e16666;
@@ -29,8 +27,12 @@ body {
 .remove:hover {
     cursor: pointer;
 }
-.skills {
+.skills-list {
     color: #f6ab42;
+    list-style: none;
+    width: 400px;
+    padding: 0px;
+    margin: 0px;
 }
 #new-skills-input-area {
     width: 300px;
@@ -48,6 +50,9 @@ body {
 #add-skills-button:hover {
     cursor: pointer;
 }
-
-
-
+li {
+    margin: 8px;
+}
+.where {
+    text-align: center;
+}

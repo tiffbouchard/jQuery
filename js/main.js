@@ -1,24 +1,27 @@
-//variable that will hold new skill when entered
-// let newSkills = {skill: ""};
+//code below 
 
-
-//make newSkills equal to the input 
-let $newSkill = $('#new-skills-input-area').val();
-let $skillsTable = $('.skills');
 let $addSkillsButton = $('#add-skills-button');
+let $skillsList = $('.skills-list')
 
-  let newSkillsElement = //new element that has the input value inside a th value with a button
+$skillsList.on('click', 'button', removeSkill);
+$addSkillsButton.on('click', addSkill);
 
-//function to carry out when ad skill button is clicked
+function addSkill () {
+  let $inputArea = $('#new-skills-input-area');
+  if ($inputArea.val() === '') {
+    return;
+  } else {
+    $('.where').remove();
+    let $skillsInputVal = $inputArea.val();
+    $skillsList.append(`<li><button class="remove">X</button>${$skillsInputVal}</li>`);
+  }
+}
 
-$addSkillsButton.on('click', function (evt) {
-  //append newSkillsElement to the table
+function removeSkill () {
+  $('li').remove();
+  // $skillsList.append('Hey, you removed all your skills!');
+}
 
-  console.log(evt);
-//  ("<tr>hi</tr>").insertAfter(".skills");
-
-  //  $newSkill.append($skillsTable);
-});
-
-
-{/* <th><button class="remove">X</button></th> */}//ad this button later
+//how to not delete all of them
+//clear input box after adding the skill
+//show "Hey, you removed all your skills" when you remove all skills

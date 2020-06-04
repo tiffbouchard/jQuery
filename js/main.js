@@ -1,5 +1,3 @@
-//code below 
-
 let $addSkillsButton = $('#add-skills-button');
 let $skillsList = $('.skills-list')
 
@@ -17,11 +15,11 @@ function addSkill () {
   }
 }
 
-function removeSkill () {
-  $('li').remove();
-  // $skillsList.append('Hey, you removed all your skills!');
+function removeSkill (event) {
+  let list = $(event.target).parent();
+    $(list).remove();
+  if ($skillsList.children().length <= 0) {
+    $skillsList.append("<p>Where did your skills go?</p>");
+  }
 }
-
-//how to not delete all of them
-//clear input box after adding the skill
-//show "Hey, you removed all your skills" when you remove all skills
+//create p element with class .where with "where did your skills go" and append this to skillslist so dont have to style p in css separately since both where and this new p element have the same styling

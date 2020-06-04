@@ -7,6 +7,9 @@ body {
     justify-content: center;
     align-items: center;   
 }
+p {
+    text-align: center;
+}
 .main-header {
     width: 400px;
     padding: 10px;
@@ -25,6 +28,7 @@ body {
     margin: 0 10px 0 0;
 }
 .remove:hover {
+    background-color: #db4343;
     cursor: pointer;
 }
 .skills-list {
@@ -39,6 +43,7 @@ body {
     height: 32px;
     margin: 0 15px 0 0;
     border: 3px solid #93c47e;
+    font-size: 15px;
 }
 #add-skills-button {
     width: 100px;
@@ -46,6 +51,7 @@ body {
     border: 3px solid #93c47e;
     color: #93c47e;
     font-size: 15px;
+    background-color: white;
 }
 #add-skills-button:hover {
     cursor: pointer;
